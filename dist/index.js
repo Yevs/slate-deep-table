@@ -69,7 +69,7 @@ function EditTable(opts) {
     /**
      * User is pressing a key in the editor
      */
-    function onKeyDown(event, change) {
+    function onKeyDown(event, change, next) {
         var value = change.value;
         // Only handle events in cells
 
@@ -87,6 +87,7 @@ function EditTable(opts) {
             case KEY_UP:
                 return onUpDown.apply(undefined, args);
         }
+        return next();
     }
 
     var _makeSchema = makeSchema(opts),
