@@ -74,7 +74,7 @@ function EditTable(opts) {
         // Only handle events in cells
 
         if (!isSelectionInTable(value)) {
-            return;
+            return next();
         }
 
         // Build arguments list
