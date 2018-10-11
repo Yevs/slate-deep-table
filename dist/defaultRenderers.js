@@ -25,8 +25,7 @@ var splitHeader = function splitHeader(props) {
  */
 var makeRenderers = function makeRenderers() {
     var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var next = arguments[1];
-    return function (props) {
+    return function (props, next) {
         switch (props.node.type) {
             case 'paragraph':
                 return React.createElement(
